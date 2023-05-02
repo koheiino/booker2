@@ -10,9 +10,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body
-  <header>
-    <% if user_signed_in? %>
+  <body>
+    <header>
+      <% if user_signed_in? %>
       <li>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       </li>
@@ -24,7 +24,7 @@
         <%= link_to "ログイン", new_user_session_path %>
       </li>
     <% end %>
-  </header>
+    </header>
     <%= yield %>
   </body>
 </html>
