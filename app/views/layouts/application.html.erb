@@ -14,7 +14,7 @@
     <header class="shadow-sm bg-dark">
   <nav class="navbar navbar-expand-lg navbar-dark container">
     <%= link_to "Bookers", root_path, class: 'navbar-brand text-white' %>
-    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarToggleExternalContent">
@@ -29,6 +29,9 @@
           </li>
           <li class="nav-item">
             <%= link_to "ログイン", new_user_session_path, class: 'nav-link text-white' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "About", about_path, class: 'nav-link text-white' %>
           </li>
         <% end %>
       </ul>
