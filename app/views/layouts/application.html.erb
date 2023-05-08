@@ -23,6 +23,11 @@
           <li class="nav-item">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-link text-white' %>
           </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+            <%= link_to "Books",  books_path, class: 'nav-link text-white' %>
+          </li>
         <% else %>
           <li class="nav-item">
             <%= link_to "新規登録", new_user_registration_path, class: 'nav-link text-white' %>
@@ -40,5 +45,8 @@
 </header>
 
     <%= yield %>
+    <footer>
+      <p class="text-center"> CopyRight Infratop.inc</p>
+    </footer>
   </body>
 </html>

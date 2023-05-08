@@ -4,7 +4,7 @@ class BooksController < ApplicationController
   end
   
   def new
-    @list = List.new
+    @list = list.new
   end
   def create
     list = List.new(book_params)

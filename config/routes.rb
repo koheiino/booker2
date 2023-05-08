@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :books
   resources :homes
   get '/about', to: 'books#about', as: 'about'
+  
 end
