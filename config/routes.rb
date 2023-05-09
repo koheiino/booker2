@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :post_images, only: [:new, :index, :show]
   resources :users
   resources :books
-  resources :homes
-  get '/about', to: 'books#about', as: 'about'
-  
+  get 'home/about', to: 'homes#about', as: 'about'
+  get 'top', to: 'homes#top', as: 'top_home'
+
 end

@@ -1,23 +1,37 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-9">
+    <div class="col-md-3">
+      <%= render 'users/user', user: @user %>
+      <h2>New book</h2>
+      <%= render 'books/book', book: @book %>
+    </div>
+
+    <div class="col-md-9">
+      <h2>Users</h2>
       <table class="table table-sm user-index">
-        <h2>Users</h2>
-         <thead>
-          <th>image</th>
-          <th>name</th>
-          <th></th>
-  	    </thead>
-  	  	<tbody>
-  	  	  <% @users.each do |user| %>
-	  	  	<tr>
-	  	  	  <td><%= attachment_image_tag user, :profile_image, :fill, 50, 50,fallback: "no_image.jpg"%></td>
-	  	  	  <td><%= user.name %></td>
-	  	  	  <td><%= link_to "Show", "/users/#{user.id}" %></td>
-	  	  	</tr>
-  	  	  <% end %>
-  	  	</tbody>
-  	  </table>
-  	 </div>
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td>
+                <% if @user.profile_image.attached? %>
+                  <%= image_tag @user.profile_image.variant(resize: "50x50", options: { fill: :fill }), fallback: "no_image.jpg" %>
+                <% else %>
+                  <%= image_tag "no_image.jpg", width: 50, height: 50 %>
+                <% end %>
+              </td>
+              <td><%= user.name %></td>
+              <td><%= link_to "Show", user_path(user) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
