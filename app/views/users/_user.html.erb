@@ -2,8 +2,13 @@
   <h2>User info</h2>
   <thead>
     <tr>
-      <%= attachment_image_tag user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg"%>
-    </tr>
+  <% if user.profile_image.attached? %>
+    <%= image_tag user.profile_image.variant(resize: "100x100", options: { fill: :fill }) %>
+  <% else %>
+    <%= image_tag "no_image.jpg" %>
+  <% end %>
+</tr>
+
   </thead>
   <tbody>
     <tr>

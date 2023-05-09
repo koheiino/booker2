@@ -1,0 +1,24 @@
+<h1>User info</h1>
+
+<%= form_for(@user) do |f| %>
+  <%= render 'books/error', model: @user %>
+
+  <div class="user-name">
+    Name
+  </div>
+  <%= f.text_field :name %>
+
+  <div class="user-edit-image">
+    Image
+  </div>
+  <%= f.attachment_field :profile_image %>
+
+  <div class="form-body">
+    Introduction
+  </div>
+  <%= f.text_area :introduction %><br>
+
+  <div class="upload">
+    <%= f.submit "Update User" %>
+  </div>
+<% end %>

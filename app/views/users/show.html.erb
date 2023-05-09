@@ -1,6 +1,10 @@
 <div class="container">
   <div class="row">
-
+    <div class="col-xs-3">
+      <%= render 'users/user', user: @user %>
+      <h2>New book</h2>
+      <%= render 'books/book', book: @book %>
+    </div>
     <div class="col-xs-9">
       <h1>Book detail</h1>
       <table class="table table-user-show">
