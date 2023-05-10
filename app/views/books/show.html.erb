@@ -1,12 +1,13 @@
-<div class="container">
+<div class="container px-5 px-sm-0">
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-3">
+      <%= render 'books/error', model: @book %>
       <%= render 'users/user', user: @user %>
       <h2>New book</h2>
       <%= render 'books/book', book: @newbook %>
     </div>
-    <div class="col-md-1">
-      <h1>Book detail</h1>
+    <div class="col-md-8 offset-md-1">
+      <h2>Book detail</h2>
       <table class="table table-user-show">
         <tr>
           <td>
