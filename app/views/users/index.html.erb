@@ -21,10 +21,12 @@
           <% @users.each do |user| %>
             <tr>
               <td>
+                <%= link_to user_path(@user) do %>
                 <% if @user.profile_image.attached? %>
                   <%= image_tag @user.profile_image.variant(resize: "50x50", options: { fill: :fill }), fallback: "no_image.jpg" %>
                 <% else %>
                   <%= image_tag "no_image.jpg", width: 50, height: 50 %>
+                <% end %>
                 <% end %>
               </td>
               <td><%= user.name %></td>
