@@ -1,24 +1,40 @@
-# README
+# Bookers2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bookers2は、ユーザーが本の投稿を作成し、他のユーザーと共有できるウェブアプリケーションです。
 
-Things you may want to cover:
+## 機能
 
-* Ruby version
+- ユーザー登録: ユーザーはアカウントを作成してログインできます。
+- 本の投稿: ユーザーは本のタイトルと感想を入力して投稿できます。
+- 投稿一覧: 投稿された本の一覧を閲覧できます。
+- 投稿詳細: 各投稿の詳細情報を閲覧できます。
+- ユーザープロフィール: ユーザーごとのプロフィールページを閲覧できます。
+- ユーザー編集: ユーザーは自身のプロフィールを編集できます。
+- 他人のアクセス制限: ユーザーは他のユーザーの編集画面へのアクセスが制限されます。
 
-* System dependencies
+## 技術スタック
 
-* Configuration
+- Ruby on Rails: Webアプリケーションフレームワーク
+- SQLite: データベース管理システム
+- Devise: ユーザー認証を簡単に実装するためのGem
+- RSpec: テストフレームワーク
 
-* Database creation
+## インストールと実行
 
-* Database initialization
+1. リポジトリをクローンします。
+git clone https://github.com/your-username/bookers2.git
 
-* How to run the test suite
+2. アプリケーションのディレクトリに移動します。
 
-* Services (job queues, cache servers, search engines, etc.)
+3. 必要なGemをインストールします。
 
-* Deployment instructions
+4. データベースを作成し、マイグレーションを実行します。
 
-* ...
+5. アプリケーションを起動します。
+
+
+6. ブラウザで http://localhost:3000 を開きます。
+
+## ライセンス
+
+MITライセンスのもとで公開されています。詳細は [LICENSE](LICENSE) ファイルを参照してください。
