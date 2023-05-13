@@ -21,13 +21,13 @@
     </tr>
     <tr>
       <th colspan="2">
-        <% if current_user == user %>
-          <%= link_to edit_user_path(current_user), class: "btn btn-default btn-block border" do %>
+        <% if current_user == @user %>
+          <%= link_to edit_user_path(@user), class: "btn btn-default btn-block border" do %>
             <i class="fas fa-user-cog" style="color: #5f5d5d;"></i>
             <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
           <% end %>
         <% else %>
-          <%= link_to user_path(current_user), class: "btn btn-default btn-block border" do %>
+          <%= link_to edit_user_path(@user), class: "btn btn-default btn-block border" do %>
             <i class="fas fa-user-cog" style="color: #5f5d5d;"></i>
             <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
           <% end %>

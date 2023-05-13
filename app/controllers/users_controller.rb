@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :require_authorization, only: [:edit]
   def show
     @user = User.find(params[:id])
     @book = Book.new
@@ -23,6 +24,7 @@ class UsersController < ApplicationController
 
 
 
+
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
@@ -35,5 +37,12 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:name, :profile_image, :introduction)
+  end
+  
+  
+  def require_authorization
+  unless current_user == User.find(params[:id])
+    redirect_to user_path(current_user), alert: "他のユーザーの編集はできません。"
+  end
   end
 end
