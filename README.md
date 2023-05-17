@@ -15,7 +15,6 @@ Bookers2は、ユーザーが本の投稿を作成し、他のユーザーと共
 ## 技術スタック
 
 - Ruby on Rails: Webアプリケーションフレームワーク
-- SQLite: データベース管理システム
 - Devise: ユーザー認証を簡単に実装するためのGem
 - RSpec: テストフレームワーク
 
@@ -34,7 +33,3 @@ git clone https://github.com/your-username/bookers2.git
 
 
 6. ブラウザで http://localhost:3000 を開きます。
-
-## ライセンス
-
-MITライセンスのもとで公開されています。詳細は [LICENSE](LICENSE) ファイルを参照してください。
